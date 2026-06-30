@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+node_modules/
+
+# Source bundle for integrated documents (contains a 3.5GB .dta) — not for committing
+sitemap_old/

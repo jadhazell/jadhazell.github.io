@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long Term Housing Yield &mdash; Jonathon Hazell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/custom.css">
+<script>
+function toggleProjects() {
+  var list = document.getElementById('projects-list');
+  var chevron = document.getElementById('projects-chevron');
+  if (list.style.display === 'none') {
+    list.style.display = '';
+    if (chevron) chevron.textContent = '▾';
+  } else {
+    list.style.display = 'none';
+    if (chevron) chevron.textContent = '▸';
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+<img src="../../images/JonathonHazell.jpg" alt="Photo of Jonathon Hazell" class="portrait">
+<h1>Jonathon Hazell</h1>
+<p>Assistant Professor, Department of Economics, London School of Economics</p>
+<hr>
+<p class="contactinfo"><a href="../../index.html">Home</a></p>
+<p class="contactinfo"><a href="../../papers/JONATHON_HAZELL.pdf">Vitae</a></p>
+<p class="contactinfo"><a href="../../index.html#news">News</a></p>
+<p class="contactinfo"><a href="../../index.html#papers">Papers &amp; Discussions</a></p>
+<p class="contactinfo nav-group">Data and Codes</p>
+<div id="projects-list">
+<p class="contactinfo nav-sub"><a href="../firm-name-cleaning/index.html">Firm Name Cleaning</a></p>
+<p class="contactinfo nav-sub"><a href="../long-term-housing-yield/index.html" class="current">Long Term Housing Yield</a></p>
+<p class="contactinfo nav-sub"><a href="../state-cpi/index.html">State Consumer Price Index</a></p>
+<p class="contactinfo nav-sub"><a href="../narrative-data/index.html">Narrative Data from Investment Banks</a></p>
+</div>
+</header>
+
+<section>
+<h2>Dynamics of the Long Term Housing Yield</h2>
+
+<p>Using a natural experiment in UK housing, <a href="https://sites.google.com/view/veronicabp/home" target="_blank" rel="noopener">Ver&oacute;nica B&auml;cker-Peral</a>, <a href="https://atif.scholar.princeton.edu/" target="_blank" rel="noopener">Atif Mian</a> and I have created a new series measuring the long term housing yield from 2003&ndash;present.</p>
+
+<p>Our estimate of the long term housing yield is precise, avoids certain misspecification concerns, and provides real-time estimates using publicly available data.</p>
+
+<p>The <a href="https://sites.google.com/view/ystar-dynamics" target="_blank" rel="noopener">project website</a> has real-time estimates and replication instructions. The associated paper is <a href="../../papers/UK_Duration.pdf" target="_blank" rel="noopener">&ldquo;Dynamics of the Long Term Housing Yield: Evidence from Natural Experiments&rdquo;</a>.</p>
+
+<p>Comments and feedback welcome!</p>
+</section>
+
+</div>
+</body>
+</html>

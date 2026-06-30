@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firm Name Cleaning &mdash; Jonathon Hazell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/custom.css">
+<script>
+function toggleProjects() {
+  var list = document.getElementById('projects-list');
+  var chevron = document.getElementById('projects-chevron');
+  if (list.style.display === 'none') {
+    list.style.display = '';
+    if (chevron) chevron.textContent = '▾';
+  } else {
+    list.style.display = 'none';
+    if (chevron) chevron.textContent = '▸';
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+<img src="../../images/JonathonHazell.jpg" alt="Photo of Jonathon Hazell" class="portrait">
+<h1>Jonathon Hazell</h1>
+<p>Assistant Professor, Department of Economics, London School of Economics</p>
+<hr>
+<p class="contactinfo"><a href="../../index.html">Home</a></p>
+<p class="contactinfo"><a href="../../papers/JONATHON_HAZELL.pdf">Vitae</a></p>
+<p class="contactinfo"><a href="../../index.html#news">News</a></p>
+<p class="contactinfo"><a href="../../index.html#papers">Papers &amp; Discussions</a></p>
+<p class="contactinfo nav-group">Data and Codes</p>
+<div id="projects-list">
+<p class="contactinfo nav-sub"><a href="../firm-name-cleaning/index.html" class="current">Firm Name Cleaning</a></p>
+<p class="contactinfo nav-sub"><a href="../long-term-housing-yield/index.html">Long Term Housing Yield</a></p>
+<p class="contactinfo nav-sub"><a href="../state-cpi/index.html">State Consumer Price Index</a></p>
+<p class="contactinfo nav-sub"><a href="../narrative-data/index.html">Narrative Data from Investment Banks</a></p>
+</div>
+</header>
+
+<section>
+<h2>Firm Name Cleaning</h2>
+
+<p>This page contains code to clean and harmonize firm names, either for general databases of firm names or specifically for the firm names from the Burning Glass / Lightcast dataset of online firm level vacancies.</p>
+
+<p><a href="../../data/firm_names_preclean.do" target="_blank" rel="noopener">Here</a> is a link to firm name cleaning code. This code can be applied with few alterations to any dataset of firm names that needs to be cleaned or harmonized.</p>
+
+<p><a href="https://www.dropbox.com/s/dm58ly3acimb65w/firm_merge.dta?dl=0" target="_blank" rel="noopener">Here</a> is a link to a crosswalk (3.5GB size), which maps from raw firm names in Burning Glass / Lightcast data to cleaned and harmonized firm names. This crosswalk first applies the cleaning code above, and then uses a machine learning deduplication algorithm, <a href="https://github.com/dedupeio/dedupe" target="_blank" rel="noopener">Dedupe</a>. The procedure to train the algorithm and construct the crosswalk is described in Appendix A1.1 of &ldquo;National Wage Setting&rdquo; (by Jonathon Hazell, Christina Patterson, Heather Sarsons and Bledi Taska).</p>
+
+<p>These codes were developed by Anna Stansbury, Gregor Schubert, Jonathon Hazell, Christina Patterson, Heather Sarsons and Bledi Taska. If you use these codes, please cite:</p>
+
+<p style="padding-left: 20px;">Schubert, G., Stansbury, A., &amp; Taska, B. (2021). Employer Concentration and Outside Options.<br>
+Hazell, J., Patterson, C., Sarsons, H., &amp; Taska, B. (2024). National Wage Setting.</p>
+</section>
+
+</div>
+</body>
+</html>
