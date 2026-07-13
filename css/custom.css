@@ -1,6 +1,8 @@
 header img.portrait {
   display: block;
-  width: 100%;
+  width: 270px;
+  max-width: 100%;
+  height: auto;
   margin: 0 0 22px;
   border-radius: 3px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
@@ -23,7 +25,7 @@ ul.news-list .news-date {
   flex: 0 0 130px;
   color: #A04030;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding-top: 2px;
@@ -49,21 +51,24 @@ ul.news-list .news-body {
 }
 
 .paper-filter .filter-label {
-  color: #6d6d6d;
+  color: var(--muted);
   margin-right: 6px;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
 }
 
 .filter-chip {
-  border: 1px solid #c9c0bd;
+  min-height: 38px;
+  border: 1px solid #918783;
   background: transparent;
-  color: #6d6d6d;
-  padding: 3px 12px;
+  color: var(--muted);
+  padding: 6px 14px;
   border-radius: 999px;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.2;
   cursor: pointer;
+  touch-action: manipulation;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -100,7 +105,7 @@ ul.news-list .news-body {
   padding: 2px 7px 1px;
   border: 1px solid transparent;
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.35;
   letter-spacing: 0.07em;
@@ -126,8 +131,8 @@ ul.news-list .news-body {
 }
 
 .research-work .work-muted {
-  color: #6d6d6d;
-  font-size: 14px;
+  color: var(--muted);
+  font-size: 16px;
 }
 
 .research-work .work-abstract {
@@ -136,7 +141,7 @@ ul.news-list .news-body {
 
 a.abstract-link {
   color: #6F2C20;
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 600;
   font-style: italic;
   border-bottom: none;
@@ -160,6 +165,63 @@ a.abstract-link span {
   background: #f3efe9;
   border-left: 3px solid #A04030;
   border-radius: 0 3px 3px 0;
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.55;
+}
+
+@media screen and (max-width: 1160px) {
+  header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  header img.portrait {
+    float: right;
+    width: 200px;
+    margin: 0 0 24px 32px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  header img.portrait {
+    float: none;
+    width: min(46vw, 170px);
+    margin: 0 0 20px;
+  }
+
+  ul.news-list li {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  ul.news-list .news-date {
+    display: block;
+    margin-bottom: 4px;
+    padding-top: 0;
+  }
+
+  .paper-filter {
+    gap: 8px;
+  }
+
+  .paper-filter .filter-label {
+    flex: 0 0 100%;
+    margin: 0 0 2px;
+  }
+
+  .filter-chip {
+    min-height: 44px;
+    padding: 8px 15px;
+  }
+
+  a.abstract-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .research-work {
+    padding-left: 8px;
+  }
 }
